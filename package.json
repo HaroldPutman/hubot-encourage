@@ -1,0 +1,33 @@
+{
+  "name": "hubot-encourage",
+  "version": "1.0.0",
+  "description": "Robot is very encouraging",
+  "main": "dist/index.js",
+  "license": "ISC",
+  "author": {
+  	"name": "Harold Putman",
+  	"email": "h.putman@ieee.org"
+  },
+  "repository": "https://github.com/HaroldPutman/hubot-encourage.git",
+  "keywords": [
+	  "hubot-script"
+  ]	,
+  "scripts": {
+  	"build": "babel src -d dist",
+    "start": "babel src -d scripts; hubot --adapter shell --disable-httpd",
+    "prepublish": "babel src -d dist",
+   	"test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --compilers js:babel-core/register",
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "devDependencies": {
+  	"babel-cli": "^6.5.1",
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
+    "chai": "^3.4.1",
+  	"coveralls": "^2.11.6",
+    "hubot": "^2.18.0",
+	  "hubot-test-helper": "^1.4.4",
+	  "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^2.3.4"
+  }
+}
