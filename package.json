@@ -16,7 +16,7 @@
     "build": "babel src -d dist",
     "start": "babel src -d scripts; hubot --adapter shell --disable-httpd",
     "prepublish": "babel src -d dist",
-    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --compilers js:babel-core/register --compilers coffee:coffee-script",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --compilers js:babel-core/register --compilers coffee:coffee-script/register",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "devDependencies": {
