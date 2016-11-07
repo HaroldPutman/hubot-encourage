@@ -25,17 +25,16 @@ NewMockResponse = (function(superClass) {
 })(Helper.Response);
 
 
-describe('hubot', () => {
+describe('hubot', function() {
 
 	var room;
 
-	beforeEach(() => room = helper.createRoom({response: NewMockResponse}));
-	afterEach(() => room.destroy());
+	beforeEach(function() { room = helper.createRoom({response: NewMockResponse})});
+	afterEach(function() { room.destroy()});
 
-	it('should respond when asked to encourage person', done => {
+	it('should respond when asked to encourage person', function(done) {
 
-		room.user.say('alice', 'hubot encourage bill').then(() =>{
-			console.log (room.messages);
+		room.user.say('alice', 'hubot encourage bill').then(function() {
 			expect(room.messages).to.eql([
 				['alice', 'hubot encourage bill'],
 				['hubot', 'Bill is good at like, 10 times more things than I am.']
