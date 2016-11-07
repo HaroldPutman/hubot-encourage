@@ -1,13 +1,13 @@
 'use strict';
 
-const Helper = require('hubot-test-helper');
-const expect = require('chai').expect;
+var Helper = require('hubot-test-helper');
+var expect = require('chai').expect;
 
-const helper = new Helper('../src/index.js'); // path to file you want to test
+var helper = new Helper('../src/index.js'); // path to file you want to test
 
-let NewMockResponse;
-const hasProp = {}.hasOwnProperty;
-const extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+var NewMockResponse;
+var hasProp = {}.hasOwnProperty;
+var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 NewMockResponse = (function(superClass) {
   extend(NewMockResponse, superClass);
@@ -27,7 +27,7 @@ NewMockResponse = (function(superClass) {
 
 describe('hubot', () => {
 
-	let room;
+	var room;
 
 	beforeEach(() => room = helper.createRoom({response: NewMockResponse}));
 	afterEach(() => room.destroy());
