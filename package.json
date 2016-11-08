@@ -10,7 +10,9 @@
   },
   "repository": "https://github.com/HaroldPutman/hubot-encourage.git",
   "keywords": [
-    "hubot-script"
+    "hubot-scripts",
+    "hubot",
+    "fun"
   ],
   "scripts": {
     "build": "babel src -d dist",
