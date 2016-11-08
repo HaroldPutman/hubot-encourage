@@ -46,7 +46,8 @@ module.exports = (robot) => {
 	robot.respond(/encourage @?(?:(me|us|everyone|all|(?:the )?team)|(.+))/i, msg => {
 		let name = msg.match[2];
 		if (msg.match[1] === "me") {
-			name = (Math.random() > 0.5) ? msg.message.user.name : "you";
+			let mi = [msg.message.user.name, "you"]; // mi, a name I call myself
+			name = msg.random(mi);
 		}
 	  if (typeof name !== "undefined") {
 			msg.send(capitalize(msg.random(data.remarks).replace("%", name)));

@@ -17,7 +17,7 @@ NewMockResponse = (function(superClass) {
   }
 
   NewMockResponse.prototype.random = function(items) {
-    return "% is good at like, 10 times more things than I am.";
+    return items[0];
   };
 
   return NewMockResponse;
@@ -37,7 +37,35 @@ describe('hubot', () => {
 		room.user.say('alice', 'hubot encourage bill').then(() => {
 			expect(room.messages).to.eql([
 				['alice', 'hubot encourage bill'],
-				['hubot', 'Bill is good at like, 10 times more things than I am.']
+				['hubot', 'Great job, bill!']
+			]);
+
+			done();
+
+		});
+
+	});
+
+	it('should respond when asked to encourage everyone', (done) => {
+
+		room.user.say('kumar', 'hubot encourage us').then(() => {
+			expect(room.messages).to.eql([
+				['kumar', 'hubot encourage us'],
+				['hubot', 'Great job today, everyone!']
+			]);
+
+			done();
+
+		});
+
+	});
+
+	it('should encourage me when asked', (done) => {
+
+		room.user.say('bob', 'hubot encourage me').then(() => {
+			expect(room.messages).to.eql([
+				['bob', 'hubot encourage me'],
+				['hubot', 'Great job, bob!']
 			]);
 
 			done();

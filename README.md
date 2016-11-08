@@ -1,4 +1,5 @@
 # hubot-encourage
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
 > Robot is very encouraging
 
@@ -12,7 +13,7 @@ Then add **hubot-encourage** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-taboo-topics"
+  "hubot-encourage"
 ]
 ```
 
@@ -35,6 +36,12 @@ To test this script interactively, run:
 npm start
 ```
 
+To run automated tests:
+
+```
+npm test
+```
+
 [npm-image]: https://badge.fury.io/js/hubot-encourage.svg
 [npm-url]: https://npmjs.org/package/hubot-encourage
 [travis-image]: https://travis-ci.org/HaroldPutman/hubot-encourage.svg?branch=master
@@ -42,4 +49,4 @@ npm start
 [daviddm-image]: https://david-dm.org/HaroldPutman/hubot-encourage.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/HaroldPutman/hubot-encourage
 [coveralls-image]: https://coveralls.io/repos/github/HaroldPutman/hubot-encourage/badge.svg?branch=master
-[coveralls-url]:https://coveralls.io/github//hubot-encourage?branch=master
+[coveralls-url]:https://coveralls.io/github/HaroldPutman/hubot-encourage?branch=master
