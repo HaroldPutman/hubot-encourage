@@ -27,51 +27,49 @@ NewMockResponse = (function(superClass) {
 
 describe('hubot', () => {
 
-	let room;
+  let room;
 
-	beforeEach(function() { room = helper.createRoom({response: NewMockResponse})});
-	afterEach(function() { room.destroy()});
+  beforeEach(function() { room = helper.createRoom({response: NewMockResponse})});
+  afterEach(function() { room.destroy()});
 
-	it('should respond when asked to encourage person', (done) => {
+  it('should respond when asked to encourage person', (done) => {
 
-		room.user.say('alice', 'hubot encourage bill').then(() => {
-			expect(room.messages).to.eql([
-				['alice', 'hubot encourage bill'],
-				['hubot', 'Great job, bill!']
-			]);
+    room.user.say('alice', 'hubot encourage bill').then(() => {
+      expect(room.messages).to.eql([
+        ['alice', 'hubot encourage bill'],
+        ['hubot', 'Great job, bill!']
+      ]);
 
-			done();
+      done();
 
-		});
+    });
 
-	});
+  });
 
-	it('should respond when asked to encourage everyone', (done) => {
+  it('should respond when asked to encourage everyone', (done) => {
 
-		room.user.say('kumar', 'hubot encourage us').then(() => {
-			expect(room.messages).to.eql([
-				['kumar', 'hubot encourage us'],
-				['hubot', 'Great job today, everyone!']
-			]);
+    room.user.say('kumar', 'hubot encourage us').then(() => {
+      expect(room.messages).to.eql([
+      ['kumar', 'hubot encourage us'],
+      ['hubot', 'Great job today, everyone!']
+      ]);
 
-			done();
+      done();
 
-		});
+    });
 
-	});
+  });
 
-	it('should encourage me when asked', (done) => {
+  it('should encourage me when asked', (done) => {
 
-		room.user.say('bob', 'hubot encourage me').then(() => {
-			expect(room.messages).to.eql([
-				['bob', 'hubot encourage me'],
-				['hubot', 'Great job, bob!']
-			]);
+    room.user.say('bob', 'hubot encourage me').then(() => {
+      expect(room.messages).to.eql([
+        ['bob', 'hubot encourage me'],
+        ['hubot', 'Great job, bob!']
+      ]);
 
-			done();
-
-		});
-
-	});
+      done();
+    });
+  });
 
 });
