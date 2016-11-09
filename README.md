@@ -21,6 +21,12 @@ Then add **hubot-encourage** to your `external-scripts.json`:
 
 ISC © Harold Putman
 
+## Configuration:
+
+You can customize the response text. Copy the file data.json from here to a
+file named `hubot-encourage-data.json` in your hubot project folder. Then make
+the changes you want.
+
 ## Sample interaction
 
 ```
@@ -46,7 +52,8 @@ npm test
 [npm-url]: https://npmjs.org/package/hubot-encourage
 [travis-image]: https://travis-ci.org/HaroldPutman/hubot-encourage.svg?branch=master
 [travis-url]: https://travis-ci.org/HaroldPutman/hubot-encourage
-[daviddm-image]: https://david-dm.org/HaroldPutman/hubot-encourage.svg?theme=shields.io
+[daviddm-image]:
+https://david-dm.org/haroldputman/hubot-encourage/dev-status.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/HaroldPutman/hubot-encourage
 [coveralls-image]: https://coveralls.io/repos/github/HaroldPutman/hubot-encourage/badge.svg?branch=master
 [coveralls-url]:https://coveralls.io/github/HaroldPutman/hubot-encourage?branch=master
