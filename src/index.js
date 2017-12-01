@@ -43,7 +43,7 @@ module.exports = (robot) => {
     return result.substring(0, 1).toUpperCase() + result.substring(1);
   }
 
-  robot.respond(/encourage @?(?:(me|us|everyone|all|(?:the )?team)|(.+))/i, msg => {
+  robot.respond(/encourage\s+@?(?:(me|us|everyone|all|(?:the )?team)|(.+))/i, msg => {
     let name = msg.match[2];
     if (msg.match[1] === "me") {
       let mi = [msg.message.user.name, "you"]; // mi, a name I call myself
