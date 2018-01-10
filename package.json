@@ -17,8 +17,8 @@
   "scripts": {
     "build": "babel src -d dist",
     "start": "babel src -d scripts; hubot --adapter shell --disable-httpd",
-    "prepublish": "babel src -d dist",
-    "test": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R spec --require babel-register --require babel-polyfill --compilers coffee:coffeescript/register",
+    "prepare": "babel src -d dist",
+    "test": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R spec --require babel-register --require babel-polyfill",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "devDependencies": {
@@ -28,7 +28,6 @@
     "babel-preset-es2015-node5": "^1.2.0",
     "babel-register": "^6.26.0",
     "chai": "^3.4.2",
-    "coffeescript": "^2.1.1",
     "coveralls": "^2.13.3",
     "eslint": "^3.19.0",
     "hubot": "^2.19.0",
