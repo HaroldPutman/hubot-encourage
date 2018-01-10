@@ -1,6 +1,6 @@
+.hubot_history
+coverage
+dist
 node_modules
 npm-debug.log
-dist
-coverage
 scripts
-.hubot_history
