@@ -1,9 +1,10 @@
+.gitignore
+.hubot_history
+.travis.yml
+coverage
 node_modules
 npm-debug.log
+scripts
 src
 test
-.travis.yml
 webpack.config.js
-.gitignore
-coverage
-.hubot_history
