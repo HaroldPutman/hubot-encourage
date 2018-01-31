@@ -27,12 +27,12 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015-node5": "^1.2.0",
     "babel-register": "^6.26.0",
-    "chai": "^3.4.2",
-    "coveralls": "^2.13.3",
-    "eslint": "^3.19.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.16.0",
     "hubot": "^2.19.0",
     "hubot-test-helper": "^1.8.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.5.3"
+    "mocha": "^5.0.0"
   }
 }
