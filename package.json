@@ -1,6 +1,6 @@
 {
   "name": "hubot-encourage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Robot is very encouraging",
   "main": "dist/index.js",
   "license": "ISC",
